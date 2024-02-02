@@ -1,1 +1,103 @@
-<p>client works!</p>
+<clr-tabs>
+    <clr-tab>
+          <button clrTabLink>Utilisateur</button>
+          <clr-tab-content>
+            <br><br><br><br>
+            <clr-datagrid >
+              <clr-dg-action-bar>
+                <div class="btn-group large-screen">
+                    <button type="button" class="btn btn-sm btn-secondary" routerLink="add-user">
+                        <clr-icon shape="plus"></clr-icon> Ajouter Client
+                    </button>
+                </div>
+            </clr-dg-action-bar>
+              <clr-dg-column >
+                <ng-container >
+                  Id
+                </ng-container>
+              </clr-dg-column>
+              <clr-dg-column >
+                <ng-container >
+                Prenom de Client
+                </ng-container>
+              </clr-dg-column>
+            
+          
+              <clr-dg-column [clrDgField]="'dueDate'">
+                <ng-container >
+              Nom de Client
+              </ng-container>
+                <clr-dg-filter>
+                
+                </clr-dg-filter>
+              </clr-dg-column>
+              <clr-dg-column [clrDgField]="'dueDate'">
+                <ng-container >
+
+Formations             
+ </ng-container>
+                <clr-dg-filter>
+                
+                </clr-dg-filter>
+              </clr-dg-column>
+              <clr-dg-column [clrDgField]="'dueDate'">
+                <ng-container >
+Totale de paiement              </ng-container>
+                <clr-dg-filter>
+                
+                </clr-dg-filter>
+              </clr-dg-column>
+              <clr-dg-column [clrDgField]="'dueDate'">
+                <ng-container >
+Totale des heures            </ng-container>
+                <clr-dg-filter>
+                
+                </clr-dg-filter>
+              </clr-dg-column>
+              <clr-dg-column >
+                <ng-container >
+                Date de création
+              </ng-container>
+                <clr-dg-filter >
+    
+                </clr-dg-filter>
+              </clr-dg-column>
+              <clr-dg-placeholder>Nous n'avons trouvé aucun Client !</clr-dg-placeholder>
+              <clr-dg-row >
+                
+                <clr-dg-action-overflow >
+                  <button class="action-item" >Détails</button>
+                  <button class="action-item"  routerLink="#">Modification</button>
+                  <button class="action-item">Suppression</button>
+                </clr-dg-action-overflow>
+                <clr-dg-cell  class="cursor-pointer" routerLink="#"> 1</clr-dg-cell>
+                <clr-dg-cell  class="cursor-pointer" routerLink="#"  > FAHEM</clr-dg-cell>
+                <clr-dg-cell  class="cursor-pointer" routerLink="#" > HAJER</clr-dg-cell>
+                <clr-dg-cell  class="cursor-pointer" routerLink="#" > 
+                    <span class="badge badge-purple">Formation full stuack-<span ><span class="badge badge-info">150 DT  <span class="clr-sr-only">items in an info badge</span></span>
+                </span></span>
+                <span class="badge badge-orange">Formation  web Introduction-<span ><span class="badge badge-info">150 DT  <span class="clr-sr-only">items in an info badge</span></span>
+            </span></span>
+                </clr-dg-cell>
+                <clr-dg-cell  class="cursor-pointer" routerLink="#" >150 </clr-dg-cell>
+                <clr-dg-cell  class="cursor-pointer" routerLink="#" > 10</clr-dg-cell>
+                <clr-dg-cell  class="cursor-pointer" routerLink="#" > 15/25/2014</clr-dg-cell>
+    
+              </clr-dg-row>
+              <clr-dg-footer>
+             
+                <clr-dg-pagination  >
+                  <clr-dg-page-size ></clr-dg-page-size>
+              
+                </clr-dg-pagination>
+              </clr-dg-footer>
+         </clr-datagrid>
+      
+         </clr-tab-content>
+        </clr-tab>
+    
+      </clr-tabs>
+      
+      
+      
+      
