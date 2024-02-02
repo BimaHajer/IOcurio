@@ -13,6 +13,7 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { UserModule } from './user/user.module';
 import { PosteModule } from './poste/poste.module';
+import { FormationModule } from './formation/formation.module';
 import {CertificationModule} from './certification/certification.module'
 
 @NgModule({
@@ -23,7 +24,7 @@ import {CertificationModule} from './certification/certification.module'
   imports: [
     BrowserModule,
     AppRoutingModule,ClarityModule,ClrIconModule,FormsModule,
-    AuthModule,CoreModule,HomeModule,UserModule,PosteModule,CertificationModule
+    AuthModule,CoreModule,HomeModule,UserModule,PosteModule,CertificationModule,FormationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
