@@ -1,12 +1,12 @@
 <clr-tabs>
 <clr-tab>
       <button clrTabLink>Utilisateur</button>
-      <clr-tab-content *clrIfActive>
+      <clr-tab-content>
         <br><br><br><br>
         <clr-datagrid >
           <clr-dg-action-bar>
             <div class="btn-group large-screen">
-                <button type="button" class="btn btn-sm btn-secondary" routerLink="">
+                <button type="button" class="btn btn-sm btn-secondary" routerLink="add-user">
                     <clr-icon shape="plus"></clr-icon> Ajouter User
                 </button>
             </div>
@@ -39,16 +39,18 @@
 
             </clr-dg-filter>
           </clr-dg-column>
-          <clr-dg-placeholder>Nous n'avons trouvé aucun Utilisateur !</clr-dg-placeholder>
-          <clr-dg-row >
-            <clr-dg-action-overflow>
+          <!-- <clr-dg-placeholder>Nous n'avons trouvé aucun Utilisateur !</clr-dg-placeholder> -->
+          <clr-dg-row *ngFor="let user of data">
+            
+            <clr-dg-action-overflow >
               <button class="action-item" >Détails</button>
-              <button class="action-item">Modification</button>
-              <button class="action-item">Suppression</button>
+              <button class="action-item"  routerLink="update-user/{{id}}">Modification</button>
+              <button class="action-item"  (click)=delete()>Suppression</button>
             </clr-dg-action-overflow>
-            <clr-dg-cell  class="cursor-pointer" routerLink="#"></clr-dg-cell>
-            <clr-dg-cell  class="cursor-pointer" routerLink="#"  ></clr-dg-cell>
-            <clr-dg-cell  class="cursor-pointer" routerLink="#" ></clr-dg-cell>
+            <clr-dg-cell  class="cursor-pointer" routerLink="#">{{user.id}}</clr-dg-cell>
+            <clr-dg-cell  class="cursor-pointer" routerLink="#"  >{{user.name}}</clr-dg-cell>
+            <clr-dg-cell  class="cursor-pointer" routerLink="#" > {{user.lastName}}</clr-dg-cell>
+            <clr-dg-cell  class="cursor-pointer" routerLink="#" > {{user.creation}}</clr-dg-cell>
 
           </clr-dg-row>
           <clr-dg-footer>
@@ -58,9 +60,12 @@
           
             </clr-dg-pagination>
           </clr-dg-footer>
-     </clr-datagrid>  
+     </clr-datagrid>
+     <app-delete-user *ngIf="showAlert" [userId]="userp" (delete)="closeAction()"></app-delete-user>
+  
      </clr-tab-content>
     </clr-tab>
+
   </clr-tabs>
   
   

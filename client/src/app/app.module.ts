@@ -13,7 +13,7 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { UserModule } from './user/user.module';
 import { PosteModule } from './poste/poste.module';
-
+import {CertificationModule} from './certification/certification.module'
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { PosteModule } from './poste/poste.module';
   imports: [
     BrowserModule,
     AppRoutingModule,ClarityModule,ClrIconModule,FormsModule,
-    AuthModule,CoreModule,HomeModule,UserModule,PosteModule
+    AuthModule,CoreModule,HomeModule,UserModule,PosteModule,CertificationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

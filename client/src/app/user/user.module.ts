@@ -6,6 +6,7 @@ import { ClarityModule } from '@clr/angular';
 // import { ClarityIcons, homeIcon } from '@cds/core/icon'
 import { ClrIconModule } from '@clr/angular';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AddUserComponent } from './add-user/add-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
@@ -22,7 +23,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     UserDetailComponent
   ],
   imports: [
-    CommonModule,ClarityModule,ClrIconModule,FormsModule,ReactiveFormsModule,UserRoutingRoutingModule,
+    CommonModule,ClarityModule,ClrIconModule,
+    FormsModule,ReactiveFormsModule,UserRoutingRoutingModule,HttpClientModule,
   ],exports:[  UserComponent, AddUserComponent,
     UpdateUserComponent,
     DeleteUserComponent]

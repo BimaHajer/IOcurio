@@ -1,1 +1,14 @@
-<p>update-user works!</p>
+<form clrForm [formGroup]="updateForm">
+    <clr-input-container>
+      <label>Id </label>
+      <input clrInput type="text" formControlName="id" name="example" />
+    </clr-input-container>
+    <clr-input-container>
+      <label>Name</label>
+      <input clrInput type="text"   formControlName="name" name="example" />
+    </clr-input-container>
+    <clr-input-container>
+        <label>LastName</label>
+        <input clrInput type="text"   formControlName="lastName" name="example" />
+      </clr-input-container>
+  </form>
