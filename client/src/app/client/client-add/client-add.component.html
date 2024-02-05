@@ -1,1 +1,40 @@
-<p>client-add works!</p>
+<span>
+    <span><a routerLink="../"> CLIENT</a></span> /
+    <span><a>Ajout</a></span>
+  </span>
+  <section>
+    <h3>Ajouter CLient</h3>
+  
+  
+    <br>
+    <form [formGroup]="form" clrForm (ngSubmit)="onSubmit()">
+        <clr-input-container>
+          <label>Name</label>
+          <input clrInput type="text" formControlName="name" />
+        </clr-input-container>
+      
+        <clr-input-container>
+          <label>Last Name</label>
+          <input clrInput type="text" formControlName="last" />
+        </clr-input-container>
+      
+        <clr-input-container>
+          <label>Description</label>
+          <input clrInput type="text" formControlName="description" />
+        </clr-input-container>
+        <clr-input-container>
+            <label>Price</label>
+            <input clrInput type="text" formControlName="price" />
+          </clr-input-container>
+          <clr-input-container>
+            <label>contacts</label>
+            <input clrInput type="text" formControlName="contacts" />
+          </clr-input-container>
+          <clr-input-container>
+            <label>adress</label>
+            <input clrInput type="text" formControlName="adress" />
+          </clr-input-container>
+      
+        <button type="submit" [disabled]="form.invalid">Submit</button>
+      </form>
+</section>      
